@@ -29,8 +29,41 @@
         </style>
     <title>Job Tracker</title>
 </head>
-<body>
+
+<body class="bg-[#F1F2F4] max-w-[1600px]">
+
+    <!-- hearder starts here  -->
     
-    <h1>hello</h1>
+    <header class="max-w-9/12 mx-auto pt-[60px] border">
+
+        <h1 class="text-[#002C5C] text-[32px] font-bold">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-3 gap-4 mt-5">
+
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-[14px] font-medium text-[#323B49] mb-2">Total</p>
+
+                <p class="text-[#002C5C]" id="total_count">0</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-[14px] font-medium text-[#323B49] mb-2">Interview</p>
+
+                <p class="text-[#10B981]"  id="interview_count">0</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-[14px] font-medium text-[#323B49] mb-2">Rejected</p>
+
+                <p class="text-[#EF4444]" id="rejected_count">0</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-8 border-[#E6E7E9]">
+
+    <!-- header ends here  -->
+
+
 </body>
 </html>
