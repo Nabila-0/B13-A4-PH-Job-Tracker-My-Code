@@ -34,7 +34,7 @@
     <title>Job Tracker</title>
 </head>
 
-<body class="bg-[#F1F2F4] max-w-[1600px]">
+<body class="bg-[#F1F2F4] max-w-[1600px] min-h-screen">
 
     <!-- hearder starts here  -->
 
@@ -88,14 +88,14 @@
     <!-- main section starts here  -->
 
 
-    <main class="max-w-11/12 md:max-w-9/12 mx-auto">
+    <main class="max-w-11/12 md:max-w-9/12 mx-auto pb-15">
 
         <div class="available_jobs_heading flex justify-between mb-4 md:mb-6">
 
             <h1 class="heading_left text-[#002C5C] text-[20px] font-semibold">Available Jobs</h1>
 
             <p class="heading_right text-[#64748B] text-base font-medium">
-                <span>8</span> jobs
+            <span id="available_stat">8</span> of 8 jobs
             </p>
         </div>
 
@@ -264,28 +264,444 @@
 
                 </div>
 
+                <!-- card 3  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">DataViz Solutions
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">Data Visualization Specialist</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>Boston, MA</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$125,000 - $165,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- card 4  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">CloudFirst Inc
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">Backend Developer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>Seattle, WA</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$140,000 - $190,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- card 5  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">Innovation Labs
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">UI/UX Engineer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>Austin, TX</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$110,000 - $150,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- card 6  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">MegaCorp Solutions
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">JavaScript Developer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>New York, NY</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$130,000 - $170,00</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- card 7  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">StartupXYZ
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">Full Stack Engineer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>Remote</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$120,000 - $160,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- card 8  -->
+
+                <div class="card bg-white p-6 border
+                border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">TechCorp Industries
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">Senior Frontend Developer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>San Francisco, CA</span>
+                            <span>•</span>
+                            <span>Full-time</span>
+                            <span>•</span>
+                            <span>$130,000 - $175,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
 
             </section>
 
 
             <!-- interview section  -->
 
-            <section id="interview_container" class="hidden">Interview section</section>
+            <section id="interview_container" class="hidden"></section>
 
 
             <!-- Reject section  -->
 
-            <section id="rejected_container" class="hidden">Rejected section</section>
+            <section id="rejected_container" class="hidden"></section>
 
         </div>
 
 
         <!-- Empty State  -->
 
-        <div id="empty_state" class="hidden">
+        <div id="empty_state" class="hidden pb-5 md:pb-18">
 
             <div class="bg-white flex flex-col 
-            items-center justify-center px-[30px] py-[70px] md:p-[111px] rounded-lg border 
+            items-center justify-center px-[30px] py-[70px] 
+            md:p-[111px] rounded-lg border 
             border-gray-200">
 
                 <img src="./jobs.png" alt="">

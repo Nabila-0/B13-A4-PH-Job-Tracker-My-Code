@@ -10,12 +10,16 @@ const interviewContainer = document.getElementById("interview_container");
 
 const rejectedContainer = document.getElementById("rejected_container"); 
 
+const emptyState = document.getElementById("empty_state");
+
 
 // function for Switching Buttons 
 
 function switchTab (tab) {
     
     const tabs = ["all", "interview", "rejected"];
+
+    currentTab = tab;
 
 
     // for of loop for Removing & adding inactive & active tab's style to the three buttons
@@ -45,15 +49,33 @@ function switchTab (tab) {
 
     // if else conditon for removing hidden class from all the sections by clicking the three buttons
 
+    emptyState.classList.add("hidden");
+
     if (tab === "all") {
         allContainer.classList.remove("hidden");
+
+        if (allContainer.children.length < 1) {
+            emptyState.classList.remove("hidden");
+        }
     }
+
     else if (tab === "interview") {
         interviewContainer.classList.remove("hidden");
+
+        if (interviewContainer.children.length < 1) {
+            emptyState.classList.remove("hidden");
+        }
     }
+
     else {
         rejectedContainer.classList.remove("hidden");
+
+        if (rejectedContainer.children.length < 1) {
+            emptyState.classList.remove("hidden");
+        }
     }
+
+    updateStat ();
 }
 
 
@@ -62,6 +84,8 @@ function switchTab (tab) {
 const totalStat = document.getElementById("total_stat");
 const interviewStat = document.getElementById("interview_stat");
 const rejectedStat = document.getElementById("rejected_stat");
+
+const availableStat = document.getElementById("available_stat");
 
 
 switchTab(currentTab);
@@ -83,28 +107,44 @@ document.getElementById("jobs_container").addEventListener("click", function (ev
     if (clickedElement.classList.contains("interview_btn")) {
         applyStatus.innerText = "Interview";
         interviewContainer.appendChild(card); 
-        updateStat ();
     }
 
     if (clickedElement.classList.contains("rejected_btn")) {
         applyStatus.innerText = "Rejected";
         rejectedContainer.appendChild(card);
-        updateStat ();
     }
 
     if (clickedElement.classList.contains("delete_btn")) {
         parentOfCard.removeChild(card);
-        updateStat ();
     }
+
+    updateStat ();
 });
 
 
 // function for updating statistics 
 
 function updateStat () {
-    totalStat.innerText = allContainer.children.length;
-    interviewStat.innerText = interviewContainer.children.length;
-    rejectedStat.innerText = rejectedContainer.children.length;
+
+    const count = {
+        all: allContainer.children.length,
+        interview: interviewContainer.children.length,
+        rejected: rejectedContainer.children.length
+    };
+
+    totalStat.innerText = count["all"];
+    interviewStat.innerText = count["interview"];
+    rejectedStat.innerText = count["rejected"];
+
+    availableStat.innerText = count[currentTab];
+
+    if (count[currentTab] < 1) {
+        emptyState.classList.remove("hidden");
+    }
+    
+    else {
+        emptyState.classList.add("hidden");
+    }
 }
 
 updateStat ();
