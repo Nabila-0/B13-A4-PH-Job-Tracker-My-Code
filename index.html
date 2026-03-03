@@ -29,11 +29,8 @@
         * {
             font-family: "Geist", sans-serif;
         }
-
-        .hidden {
-            display: none;
-        }
     </style>
+
     <title>Job Tracker</title>
 </head>
 
@@ -86,22 +83,23 @@
             <h1 class="heading_left text-[#002C5C] text-[20px] font-semibold">Available Jobs</h1>
 
             <p class="heading_right text-[#64748B] text-base font-medium">
-                <span>8</span> jobs</p>
+                <span>8</span> jobs
+            </p>
         </div>
 
         <div class="three_buttons pb-4 flex gap-2">
 
-            <button id="all_btn" class="bg-[#3B82F6] text-white 
-            px-8 py-2.5 rounded-lg font-medium text-[12px]
-            cursor-pointer">All</button>
+            <button id="all_tab" onclick="switchTab('all')"
+                class="px-8 py-2.5 rounded-lg font-medium text-[12px] cursor-pointer 
+                hover:text-gray-700 hover:border-gray-400">All</button>
 
-            <button id="interview_btn" class="text-[#64748B] bg-white 
-            py-2.5 px-3.5 rounded-lg font-medium text-[12px] border border-gray-300 cursor-pointer 
-            hover:text-gray-700">Interview</button>
+            <button id="interview_tab" onclick="switchTab('interview')" class="py-2.5 px-3.5 rounded-lg font-medium text-[12px] cursor-pointer 
+            hover:text-gray-700
+            hover:border-gray-400">Interview</button>
 
-            <button id="rejected_btn" class="text-[#64748B] bg-white 
-            py-2.5 px-3.5 rounded-lg font-medium text-[12px] border border-gray-300 cursor-pointer 
-            hover:text-gray-700">Rejected</button>
+            <button id="rejected_tab" onclick="switchTab('rejected')" class="py-2.5 px-3.5 rounded-lg font-medium text-[12px]  cursor-pointer 
+            hover:text-gray-700
+            hover:border-gray-400">Rejected</button>
 
 
         </div>
@@ -114,7 +112,7 @@
 
             <!-- all section  -->
 
-            <section id="allCards" class="">
+            <section id="all_container" class="hidden all_Cards">
 
                 <!-- card-1 -->
 
@@ -192,34 +190,42 @@
 
             <!-- interview section  -->
 
-            <section>Interview section</section>
+            <section id="interview_container" class="hidden">Interview section</section>
 
 
             <!-- Reject section  -->
 
-            <section>Reject section</section>
+            <section id="rejected_container" class="hidden">Rejected section</section>
 
         </div>
 
 
         <!-- Empty State  -->
 
-        <div id="empty_state" class="bg-white flex flex-col items-center
-        justify-center px-[30px] py-[70px] md:p-[111px] rounded-lg border border-gray-200">
+        <div id="empty_state" class="hidden">
 
-            <img src="./jobs.png" alt="">
+            <div class="bg-white flex flex-col 
+            items-center justify-center px-[30px] py-[70px] md:p-[111px] rounded-lg border 
+            border-gray-200">
 
-            <p class="mt-5 mb-1 text-xl md:text-2xl font-semibold text-[#002C5C]">No jobs available</p>
+                <img src="./jobs.png" alt="">
 
-            <p class="text-base text-[#64748B] text-center">Check back soon for new job opportunities</p>
+                <p class="mt-5 mb-1 text-xl md:text-2xl font-semibold text-[#002C5C]">No jobs available</p>
 
+                <p class="text-base text-[#64748B] text-center">Check back soon for new job opportunities</p>
+
+            </div>
         </div>
 
 
     </main>
 
+    <!-- main section ends here  -->
+
+    <!-- Linking JS File  -->
 
     <script src="./script.js"></script>
+
 </body>
 
 </html>
