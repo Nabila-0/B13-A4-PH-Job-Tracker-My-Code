@@ -43,27 +43,39 @@
         <h1 class=" text-[#002C5C] text-[28px] md:text-[32px]
         text-center md:text-left font-bold">Job Application Tracker</h1>
 
+        <!-- Statistic Cards  -->
+
         <div class="grid grid-cols-3 gap-4 mt-5">
 
-            <div class="bg-white p-5 rounded-lg border border-gray-300 
-            hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+            <!-- Total Stat Card  -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+
                 <p class="text-[14px] font-medium text-[#323B49] mb-2 text-center md:text-left">Total</p>
 
-                <p id="total_count" class="text-[#002C5C] font-bold text-2xl text-center md:text-left">0</p>
+                <p id="total_stat" 
+                class="text-[#002C5C] font-bold text-2xl text-center md:text-left">0</p>
             </div>
 
-            <div class="bg-white p-5 rounded-lg border border-gray-300 
-            hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+            <!-- Interview Stat Card  -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+
                 <p class="text-[14px] font-medium text-[#323B49] mb-2 text-center md:text-left">Interview</p>
 
-                <p id="interview_count" class="text-[#10B981] font-bold text-2xl text-center md:text-left">0</p>
+                <p id="interview_stat" 
+                class="text-[#10B981] font-bold text-2xl text-center md:text-left">0</p>
             </div>
 
-            <div class="bg-white p-5 rounded-lg border border-gray-300
-            hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+            <!-- Rejected Stat Card  -->
+
+            <div class="bg-white p-5 rounded-lg border 
+            border-gray-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-gray-300 transition-all duration-300">
+
                 <p class="text-[14px] font-medium text-[#323B49] mb-2 text-center md:text-left">Rejected</p>
 
-                <p id="rejected_count" class="text-[#EF4444] font-bold text-2xl text-center md:text-left">0</p>
+                <p id="rejected_stat" 
+                class="text-[#EF4444] font-bold text-2xl text-center md:text-left">0</p>
             </div>
         </div>
     </header>
@@ -106,9 +118,9 @@
 
 
 
-        <!-- sections div  -->
+        <!-- three sections div  -->
 
-        <div class="three_sections">
+        <div id="jobs_container" class="three_sections">
 
             <!-- all section  -->
 
@@ -116,7 +128,7 @@
 
                 <!-- card-1 -->
 
-                <div class="card bg-white p-6 border border-gray-200
+                <div class="card bg-white mb-4 p-6 border border-gray-200
                 hover:shadow-lg hover:-translate-y-0.5 
                 hover:border-gray-300 transition-all duration-300">
 
@@ -143,7 +155,7 @@
                             border-gray-200 rounded-full text-[#64748B]
                             cursor-pointer hover:text-gray-700 
                             hover:bg-gray-100">
-                                    <i class="fa-regular fa-trash-can"></i>
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
                                 </button>
                             </div>
                         </div>
@@ -164,9 +176,7 @@
                         <p class="apply_status bg-[#EEF4FF] inline-block
                     px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
 
-                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Build cross-platform mobile
-                            applications
-                            using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
 
                         <div class="card_buttons flex gap-5">
 
@@ -184,6 +194,76 @@
 
 
                 </div>
+
+                <!-- card 2  -->
+
+                <div class="card bg-white mb-4 p-6 border border-gray-200
+                hover:shadow-lg hover:-translate-y-0.5 
+                hover:border-gray-300 transition-all duration-300">
+
+                    <!-- Card's Left side -->
+
+                    <div class="left_side">
+
+                        <!-- left and right top  -->
+
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="company_name text-[18px] font-semibold  text-[#002C5C] mb-1">WebFlow Agency
+                                </p>
+
+                                <p class="post_name text-[#64748B] text-base">Web Designer & Developer</p>
+                            </div>
+
+                            <!-- Card's Right side -->
+
+                            <div class="right_side">
+
+                                <button class="delete_btn  px-4 py-2 border 
+                            border-gray-200 rounded-full text-[#64748B]
+                            cursor-pointer hover:text-gray-700 
+                            hover:bg-gray-100">
+                                    <i class="fa-regular fa-trash-can pointer-events-none"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- middle  -->
+
+                        <p class="description text-[#64748B] text-[14px]
+                        flex gap-3 my-5">
+                            <span>Los Angeles, CA</span>
+                            <span>•</span>
+                            <span>Part-time</span>
+                            <span>•</span>
+                            <span>$80,000 - $120,000</span>
+                        </p>
+
+                        <!-- bottom  -->
+
+                        <p class="apply_status bg-[#EEF4FF] inline-block
+                    px-3 py-2 rounded-sm text-[14px] font-medium text-[#002C5C]">NOT APPLIED</p>
+
+                        <p class="extra_info mt-2 mb-5 text-[#323B49] text-[14px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+
+                        <div class="card_buttons flex gap-5">
+
+                            <button
+                                class="interview_btn  px-3 py-2 text-[#10B981] bg-white border 
+                                border-[#10B981] rounded-md cursor-pointer hover:bg-[#10B981] hover:text-white transition-all duration-300">Interview</button>
+
+                            <button
+                                class="rejected_btn  px-3 py-2 text-[#EF4444] bg-white border 
+                                border-[#EF4444] rounded-md cursor-pointer hover:bg-[#EF4444] hover:text-white  transition-all duration-300">Rejected</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
 
             </section>
 
